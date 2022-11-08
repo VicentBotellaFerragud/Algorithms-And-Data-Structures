@@ -6,3 +6,10 @@ body {
 h1 {
     text-align: center;
 }
+
+hr {
+    height: .5px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
