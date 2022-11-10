@@ -113,11 +113,11 @@ function findDuplicatePizzaTypes() {
     for (let i = 0; i < pizzaTypes.length; i++) {
 
         const pizzaTypeToCompare = pizzaTypes[i];
-        
+
         for (let j = 0; j < pizzaTypes.length; j++) {
 
             if (j === i) {
-                
+
                 continue;
 
             } else {
@@ -125,11 +125,11 @@ function findDuplicatePizzaTypes() {
                 const possiblePizzaTypeMatch = pizzaTypes[j];
 
                 if (possiblePizzaTypeMatch === pizzaTypeToCompare) {
-    
+
                     duplicatePizzaType = possiblePizzaTypeMatch;
-                    
+
                 }
-    
+
                 countOfIterations++;
 
             }
@@ -137,17 +137,17 @@ function findDuplicatePizzaTypes() {
         }
 
         countOfIterations++;
-        
+
     }
 
-    duplicatePizzaType?    
+    duplicatePizzaType ?
 
         iterationsCountResult2.innerHTML = `
             The pizza type "${duplicatePizzaType}" is more than once on the pizza types list.
             The function had to iterate <b>${countOfIterations}</b> times to see if there's a duplicate pizza type 
             on the pizza types list. <button onclick="oOfNSquareExplanation()">Why this number of times?</button>
         `
-    :
+        :
 
         iterationsCountResult2.innerHTML = `
             No pizza type is more than once on the pizza types list.
@@ -156,3 +156,15 @@ function findDuplicatePizzaTypes() {
         `;
 
 }
+
+/* ----- ARRAYS ----- */
+
+//Explained in the HTML file.
+
+/* ----- LINKED LISTS ----- */
+
+//Explained in the HTML file.
+
+/* ----- DOUBLY LINKED LIST ----- */
+
+//Explained in the HTML file.

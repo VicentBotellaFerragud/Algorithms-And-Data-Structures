@@ -52,5 +52,5 @@ function oOfNSquareExplanation() {
         is said that, to compare the elements of a list of "n" elements, the function responsible for this has to iterate this list 
         "n²" times.
     `;
-    
+
 }
