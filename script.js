@@ -50,7 +50,8 @@ document.body.onkeyup = function (e) {
         if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
 
             hiddenMessageByDefault.innerHTML = `
-                This message is displayed because you pressed the space key after clicking the 'START' button.
+                This message is displayed because you pressed the space key after clicking the 'START' button. 
+                <button onclick="loopsExplanation()">Why?</button>
             `;
             gameActive = false;
 
@@ -89,6 +90,7 @@ function findAGivenPizza(pizzaType) {
         iterationsCountResult1.innerHTML = `
             The pizza type that corresponds to the entered number is "${pizzaThatCorrespondsToEnteredPizzaType}".
             The function had to iterate <b>${countOfIterations}</b> times to find this pizza type.
+            <button onclick="oOfNExplanation()">Why this number of times?</button>
         `;
 
         pizzaTypeInput.value = "";
@@ -106,7 +108,6 @@ function findAGivenPizza(pizzaType) {
 function findDuplicatePizzaTypes() {
 
     let countOfIterations = 0;
-    let pizzaTypeMoreThanOnce = false;
     let duplicatePizzaType;
 
     for (let i = 0; i < pizzaTypes.length; i++) {
@@ -114,37 +115,44 @@ function findDuplicatePizzaTypes() {
         const pizzaTypeToCompare = pizzaTypes[i];
         
         for (let j = 0; j < pizzaTypes.length; j++) {
-            
-            const possiblePizzaTypeMatch = pizzaTypes[j];
 
-            if (pizzaTypeToCompare === possiblePizzaTypeMatch && i !== j) {
-
-                pizzaTypeMoreThanOnce = true;
-                duplicatePizzaType = pizzaTypeToCompare;
+            if (j === i) {
                 
+                continue;
+
+            } else {
+
+                const possiblePizzaTypeMatch = pizzaTypes[j];
+
+                if (possiblePizzaTypeMatch === pizzaTypeToCompare) {
+    
+                    duplicatePizzaType = possiblePizzaTypeMatch;
+                    
+                }
+    
+                countOfIterations++;
+
             }
 
-            countOfIterations++;
-            
         }
 
         countOfIterations++;
         
     }
 
-    pizzaTypeMoreThanOnce?    
+    duplicatePizzaType?    
 
         iterationsCountResult2.innerHTML = `
             The pizza type "${duplicatePizzaType}" is more than once on the pizza types list.
             The function had to iterate <b>${countOfIterations}</b> times to see if there's a duplicate pizza type 
-            on the pizza types list.
+            on the pizza types list. <button onclick="oOfNSquareExplanation()">Why this number of times?</button>
         `
     :
 
         iterationsCountResult2.innerHTML = `
             No pizza type is more than once on the pizza types list.
             The function had to iterate <b>${countOfIterations}</b> times to see if there's a duplicate pizza type 
-            on the pizza types list.
+            on the pizza types list. <button onclick="oOfNSquareExplanation()">Why this number of times?</button>
         `;
 
 }

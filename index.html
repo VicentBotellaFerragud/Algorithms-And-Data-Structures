@@ -33,6 +33,8 @@
         <button onclick="activateSpaceGame()">START</button>
         <button onclick="deactivateSpaceGame()">FINISH</button>
         <span id="hiddenMessageByDefault"></span>
+        <br>
+        <div id="loopsExplanation" class="my-1"></div>
         <hr>
     </div>
 
@@ -44,12 +46,16 @@
         <input type="number" name="pizzaType" id="pizzaType" min="1" max="10">
         <button onclick="findAGivenPizza(Number(pizzaType.value))">FIND</button>
         <span id="iterationsCountResult1"></span>
+        <br>
+        <div id="oOfNExplanation" class="my-1"></div>
         <h4>O(n²):</h4>
         <h4>Now click the "FIND DUPLICATES" button to see if there's any pizza type repeated on the pizza types list.
             How many iterations do you think the function has to do in this case to find out the answer? You'll see when
             you click the button.</h4>
         <button onclick="findDuplicatePizzaTypes()">FIND DUPLICATES</button>
         <span id="iterationsCountResult2"></span>
+        <br>
+        <div id="oOfNSquareExplanation" class="my-1"></div>
         <hr>
     </div>
 
