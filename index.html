@@ -8,6 +8,7 @@
     <title>Algorithms-And-Data-Structures</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="explanations.js" defer></script>
 </head>
 
 <body>
@@ -20,6 +21,8 @@
         <input type="number" name="valueB" id="valueB">
         <button onclick="compareTwoValues(Number(valueA.value), Number(valueB.value))">SORT ASC</button>
         <span id="compareTwoValuesResult"></span>
+        <br>
+        <div id="conditionsExplanation" class="my-1"></div>
         <hr>
     </div>
 
@@ -30,6 +33,23 @@
         <button onclick="activateSpaceGame()">START</button>
         <button onclick="deactivateSpaceGame()">FINISH</button>
         <span id="hiddenMessageByDefault"></span>
+        <hr>
+    </div>
+
+    <div>
+        <h3>Running time of a function of n</h3>
+        <h4>O(n):</h4>
+        <h4>Enter a number from 1 to 10 to see what type of pizza corresponds to it and how many iterations the function
+            had to do to find this pizza type:</h4>
+        <input type="number" name="pizzaType" id="pizzaType" min="1" max="10">
+        <button onclick="findAGivenPizza(Number(pizzaType.value))">FIND</button>
+        <span id="iterationsCountResult1"></span>
+        <h4>O(n²):</h4>
+        <h4>Now click the "FIND DUPLICATES" button to see if there's any pizza type repeated on the pizza types list.
+            How many iterations do you think the function has to do in this case to find out the answer? You'll see when
+            you click the button.</h4>
+        <button onclick="findDuplicatePizzaTypes()">FIND DUPLICATES</button>
+        <span id="iterationsCountResult2"></span>
         <hr>
     </div>
 

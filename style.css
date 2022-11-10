@@ -13,3 +13,7 @@ hr {
     color: gray;
     background-color: gray;
 }
+
+.my-1 {
+    margin-block: 1rem;
+}
