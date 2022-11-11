@@ -165,6 +165,14 @@ function findDuplicatePizzaTypes() {
 
 //Explained in the HTML file.
 
-/* ----- DOUBLY LINKED LIST ----- */
+/* ----- DOUBLY LINKED LISTS ----- */
+
+//Explained in the HTML file.
+
+/* ----- QUEUES / FIFOS ----- */
+
+//Explained in the HTML file.
+
+/* ----- STACKS / LIFOS ----- */
 
 //Explained in the HTML file.
