@@ -176,3 +176,11 @@ function findDuplicatePizzaTypes() {
 /* ----- STACKS / LIFOS ----- */
 
 //Explained in the HTML file.
+
+/* ----- SETS -----*/
+
+//Explained in the HTML file.
+
+/* ----- HASH MAPS ----- */
+
+//Explained in the HTML file.
