@@ -184,3 +184,77 @@ function findDuplicatePizzaTypes() {
 /* ----- HASH MAPS ----- */
 
 //Explained in the HTML file.
+
+/* ----- BINARY SEARCH ----- */
+
+const sortedNumbers = [10, 20, 30, 40, 60, 110, 120, 130, 170];
+
+function binarySearch(list, itemToSearch) {
+
+    let first = 0;
+    let last = list.length - 1;
+    let itemFound = false;
+    let numberOfSplits = 0;
+
+    while (itemFound !== true && first <= last) {
+
+        let mid = Math.floor((first + last) / 2);
+        numberOfSplits++;
+
+        if (itemToSearch === list[mid]) {
+
+            itemFound = true;
+            binarySearchResult.innerHTML = `Index of passed-in item is ${mid}. Number of splits: ${numberOfSplits}.`;
+            return
+            
+        } else {
+
+            if (itemToSearch < list[mid]) {
+
+                last = mid - 1;
+                
+            } else { 
+
+                first = mid + 1;
+
+            }
+
+        }
+        
+    }
+
+    binarySearchResult.innerHTML = `Index of passed-in item is -1. Number of splits: ${numberOfSplits}.`;
+
+}
+
+function binarySearchWithRecursion(list, itemToSearch, first, last) {
+
+    if (first > last) {
+
+        return false;
+        
+    } else {
+       
+        let mid = Math.floor((first + last) / 2);
+
+        if (itemToSearch === list[mid]) {
+
+            return mid;
+            
+        } else {
+
+            if (itemToSearch < list[mid]) {
+
+                binarySearchWithRecursion(list, itemToSearch, first, mid - 1);
+
+            } else {
+
+                binarySearchWithRecursion(list, itemToSearch, mid + 1, last);
+
+            }
+
+        }
+
+    }
+
+}

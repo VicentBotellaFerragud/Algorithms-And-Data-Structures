@@ -14,6 +14,10 @@ hr {
     background-color: gray;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .my-1 {
     margin-block: 1rem;
 }

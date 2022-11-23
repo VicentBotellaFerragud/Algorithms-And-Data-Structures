@@ -169,6 +169,34 @@
         <hr>
     </div>
 
+    <div>
+        <h3>Binary search</h3>
+        <h4>What is binary search?</h4>
+        <span>Binary Search is a search algorithm for finding an element's position in a sorted list.</span>
+        <h4>How does it work?</h4>
+        <span>This search algorithm works on the principle of divide and conquer. Binary search looks for a specific
+            item by comparing it with the middle element of a collection. If a match occurs, then the index of the
+            middle element is returned. If the middle element is greater than the specific item, then the item is
+            searched in the sub-array to the left of the middle element. Otherwise, the item is searched in the
+            sub-array to the right of the middle element. This process continues on the sub-array as well until the
+            specific item is found (or until the size of the subarray reduces to zero).</span>
+        <h4>Example of binary search:</h4>
+        <span>Consider the following list: {10, 20, 30, 40, 60, 110, 120, 130, 170}</span>
+        <p>Enter in the input below "130".</p>
+        <input type="number" name="binaySearch" id="binaySearch">
+        <button onclick="binarySearch(sortedNumbers, Number(binaySearch.value))">FIND LIST INDEX OF THE PASSED-IN
+            ELEMENT AND HOW MANY TIMES THE ALGORITHM HAD TO SPLIT THE LIST IN
+            HALF</button>
+        <span id="binarySearchResult"></span>
+        <p>Now click on the button to the right of the input. Considering how the algorithm works, how many times should
+            the algorithm split the list in half before finding the item "130"? Does your answer match the solution? Of
+            course you can try the algorithm with other items, but keep in mind that if you enter in the input an item
+            that does not belong to the list the resulting index will be "-1" (also remember that the first item on the
+            list has index 0, not 1).</p>
+        <p>On a list of n elements, binary search has a running time of O(log n).</p>
+        <hr>
+    </div>
+
 </body>
 
 </html>
