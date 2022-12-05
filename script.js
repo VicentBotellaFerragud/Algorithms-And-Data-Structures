@@ -276,11 +276,10 @@ function createUnsortedList() {
 
 }
 
-function selectionSort(list) { // Let's say list is [3, 6, 9, 2, 5, 1];
+function selectionSort(list) {
 
     for (let index = 0; index < list.length; index++) {
 
-        // At the beginning of each iteration "smallest" has the value of "index".
         let smallest = index; 
 
         for (let i = smallest + 1; i < list.length; i++) { 
@@ -292,21 +291,10 @@ function selectionSort(list) { // Let's say list is [3, 6, 9, 2, 5, 1];
             }
     
         } 
-        // When the inner loop is finished, "smallest" has the value of the index whose corresponding value is the smallest on the list.
-    
-        // Now the element that is being considered in the iteration (element with index "index") becomes the element 
-        // with index "smallest" and viceversa. In other words, they switch places.
+
         cache = list[index];
         list[index] = list[smallest];
         list[smallest] = cache;
-
-        // After the the first iteration the list is [1, 6, 9, 2, 5, 3], because "1" is the smallest element, and it's consequently
-        // placed in the current "index" position (which is 0 in the first iteration), and also because "3" is the element being
-        // considered during the first iteration ("3" is the element with index 0), and it's consequently placed where "1" was.
-
-        // In the second iteration "index" is 1 (which corresponds to the element "6") and, therefore, when the inner loop is
-        // finished, "smallest" becomes the index of the smallest element between "9" and "3". That is, the smallest element between
-        // list[1 + 1] (which is "9") and list[list.lenght - 1] (which is "3").
         
     }
 
@@ -314,12 +302,10 @@ function selectionSort(list) { // Let's say list is [3, 6, 9, 2, 5, 1];
 
 }
 
-function createUnsortedListAndSortIt(list) {
+function createUnsortedListAndSortIt() {
 
     let sortedList = [];
     let unsortedList = createUnsortedList();
-
-    const start = new Date().getTime();
 
     console.log(unsortedList);
 
